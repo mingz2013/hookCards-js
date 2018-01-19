@@ -1,0 +1,115 @@
+{
+  "default": {
+    "father": "",
+    "title": "通用摆牌器",
+    "rule": [
+      {
+        "desc": "seat1",
+        "name": "seat1",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": 13
+      },
+      {
+        "desc": "seat2",
+        "name": "seat2",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": 13
+      },
+      {
+        "desc": "seat3",
+        "name": "seat3",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": 13
+      },
+      {
+        "desc": "seat4",
+        "name": "seat4",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": 13
+      },
+      {
+        "desc": "laizipi",
+        "name": "laizipi",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": 1
+      },
+      {
+        "desc": "other",
+        "name": "other",
+        "last": false,
+        "allow_pass": true,
+        "list": [],
+        "count": -1
+      },
+      {
+        "desc": "last",
+        "name": "last",
+        "last": true,
+        "allow_pass": true,
+        "list": [],
+        "count": -1
+      }
+    ],
+    "other_rules": [],
+    "buttons": [
+      {
+        "desc": "摆牌",
+        "name": "set",
+        "router": "/v2/common/",
+        "method": "GET",
+        "args": {
+          "a": "hook_cards",
+          "sa": "set",
+          "session": "",
+          "gameId": 0,
+          "playMode": "",
+          "cards": []
+        }
+      },
+      {
+        "desc": "清除",
+        "name": "clear",
+        "router": "/v2/common/",
+        "method": "GET",
+        "args": {
+          "a": "hook_cards",
+          "sa": "clear",
+          "session": "",
+          "gameId": 0,
+          "playMode": ""
+        }
+      }
+    ],
+    "item_count": 4,
+    "allow": [
+      "1:9",
+      "11:19",
+      "21:29",
+      "31:34",
+      "35:37"
+    ],
+    "desc": [
+      "说明:",
+      "万: 1-9",
+      "筒: 11-19",
+      "条: 21-29",
+      "东南西北: 31-34",
+      "中发白: 35-37",
+      "..."
+    ]
+  },
+  "classic": {
+    "father": "default",
+    "title": "classic摆牌器"
+  }
+}
