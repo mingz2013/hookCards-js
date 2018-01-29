@@ -105,9 +105,11 @@ window.App = (function () {
         });
 
         _config.rule.forEach(function (r) {
-            if (r.count > 0) {
-                while (r.list.length < r.count) {
-                    r.list.push(new_all_allow.pop());
+            if (!r.allow_pass || r.list.length != 0) {
+                if (r.count > 0) {
+                    while (r.list.length < r.count) {
+                        r.list.push(new_all_allow.pop());
+                    }
                 }
             }
             $('#' + r.name + '-list').html('[' + r.list.join(',') + ']');
